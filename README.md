@@ -162,5 +162,55 @@ Key Takeaways
     Method overriding allows subclasses to provide specific implementations of methods already provided by parent classes.
     Default methods can be overridden to customize the behavior of objects.
 
+# Day 4 
+
+## Class Methods and Static Methods:
+
+Class Methods:
+
+    Definition:
+        Class methods in Python are defined using the @classmethod decorator.
+        They accept cls as the first parameter, representing the class itself.
+
+    Purpose:
+        Class methods are associated with the class rather than instances.
+        They can modify class-level attributes and perform operations that relate to the class as a whole.
+
+    Typical Use Cases:
+        Factory methods: Methods that create instances of the class with specific configurations.
+        Alternate constructors: Methods that provide alternative ways to create instances, possibly with different initialization logic.
+        Accessing or modifying class-level attributes: Methods that modify class attributes or provide class-level operations.
+
+Static Methods:
+
+    Definition:
+        Static methods in Python are defined using the @staticmethod decorator.
+        They do not take self or cls as their first parameter (although parameters can still be specified).
+
+    Purpose:
+        Static methods are not tied to instances or the class itself.
+        They are useful for utility functions that do not depend on instance or class state.
+
+    Typical Use Cases:
+        Utility functions: Methods that perform operations related to the class but do not require access to instance attributes.
+        Helper methods: Methods that perform generic tasks and are logically related to the class but do not modify instance or class state.
+
+Key Differences:
+
+    Accessing Attributes:
+        Class methods can access and modify class-level attributes (cls.attribute).
+        Static methods cannot access instance attributes (self.attribute) or class attributes (cls.attribute).
+
+    Usage Context:
+        Use class methods when you need to work with class-level attributes or perform operations that affect the class itself.
+        Use static methods for utility functions or operations that are logically related to the class but do not depend on instance or class state.
+
+    Decorator Usage:
+        Class methods use @classmethod decorator.
+        Static methods use @staticmethod decorator.
+
+Understanding these distinctions helps in designing more structured and efficient class hierarchies in Python, leveraging the appropriate method types based on the specific needs and responsibilities within your codebase.
+
+
 
 ### finished :D 
